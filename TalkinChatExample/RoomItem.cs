@@ -193,14 +193,8 @@ namespace TalkinChatExample
 
         private void roomsMaterialContextMenuStrip_Opening(object sender, CancelEventArgs e)
         {
-            if(isSearchResult)
-            {
-                roomsMaterialContextMenuStrip.Items["searchRoomToolStripMenuItem"].Visible = false;
-            }
-            else
-            {
-                roomsMaterialContextMenuStrip.Items["searchRoomToolStripMenuItem"].Visible = true;
-            }
+			roomsMaterialContextMenuStrip.Items["searchRoomToolStripMenuItem"].Visible = !isSearchResult;
+            
         }
 
         private void searchRoomToolStripMenuItem_Click(object sender, EventArgs e)
